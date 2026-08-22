@@ -8,7 +8,7 @@ const mobileMenuOpen = ref(false)
   <header class="site-header">
     <div class="container header-inner">
       <a href="#" class="logo" aria-label="ementa - início">
-        <span class="logo-mark">E</span>
+        <img src="/logo.png" alt="" class="logo-mark" />
         <span class="logo-text">ementa</span>
       </a>
       <button
@@ -78,7 +78,6 @@ const mobileMenuOpen = ref(false)
           <a href="#" class="btn btn-secondary btn-lg">Ver demonstração</a>
         </div>
         <div class="sources">
-          <span class="sources-label">Fontes de dados tributários e judiciais</span>
           <ul class="sources-list">
             <li>STF</li>
             <li>STJ</li>
@@ -285,7 +284,7 @@ const mobileMenuOpen = ref(false)
     <div class="container footer-inner">
       <div class="footer-brand">
         <a href="#" class="logo" aria-label="ementa - início">
-          <span class="logo-mark">E</span>
+          <img src="/logo.png" alt="" class="logo-mark" />
           <span class="logo-text">ementa</span>
         </a>
         <p>A IA jurídica que moderniza a rotina dos advogados exigentes.</p>
@@ -440,11 +439,7 @@ ul {
   width: 28px;
   height: 28px;
   border-radius: 0.25rem;
-  background: var(--primary);
-  color: var(--primary-text);
-  display: grid;
-  place-items: center;
-  font-size: 0.875rem;
+  object-fit: cover;
 }
 
 .main-nav {
