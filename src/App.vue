@@ -1,7 +1,16 @@
 <script setup lang="ts">
 import { ref } from 'vue'
+import { Gavel, Scale, ShoppingCart, Users, Briefcase } from 'lucide-vue-next'
 
 const mobileMenuOpen = ref(false)
+const billing = ref<'monthly' | 'annual'>('monthly')
+
+function formatPrice(value: number): string {
+  return value.toLocaleString('pt-BR', {
+    style: 'currency',
+    currency: 'BRL',
+  })
+}
 </script>
 
 <template>
@@ -64,14 +73,15 @@ const mobileMenuOpen = ref(false)
   <main>
     <section id="home" class="hero">
       <div class="container hero-inner">
-        <span class="eyebrow">A IA com base em tribunais</span>
+        <span class="eyebrow">A IA com base nas decisões dos tribunais pátrios</span>
         <h1 class="hero-title">
-          A IA Jurídica Definitiva para Advogados Exigentes.
+          IA Jurídica Estratégica para Advogados (as)
         </h1>
         <p class="hero-subtitle">
-          Elabore e revise petições com nossa memória contextual, consulte as
-          principais fontes jurisprudenciais e crie documentos jurídicos com
-          precisão. Tudo em um só ambiente, sem alternar entre aplicações.
+          Elabore e revise peças processuais com nossa memória contextual,
+          crie e exporte documentos, consulte jurisprudências através de
+          fontes confiáveis, tudo em um ambiente seguro com criptografia de
+          dados.
         </p>
         <div class="hero-cta">
           <a href="#preco" class="btn btn-primary btn-lg">COMECE GRÁTIS</a>
@@ -100,31 +110,24 @@ const mobileMenuOpen = ref(false)
       </div>
       <div class="container cards-grid agents-grid">
         <article class="card agent-card">
-          <span class="tag">Oficial</span>
-          <h3>Direito Civil e Geral</h3>
-          <p>
-            Contratos, responsabilidade civil, direito das pessoas e muito
-            mais. Respostas precisas e fundamentadas.
-          </p>
-          <a href="#" class="link-arrow">Meu Agente →</a>
+          <Gavel class="agent-icon" />
+          <h3>Direito Penal</h3>
         </article>
         <article class="card agent-card">
-          <span class="tag">Contencioso</span>
+          <Scale class="agent-icon" />
+          <h3>Direito Civil</h3>
+        </article>
+        <article class="card agent-card">
+          <ShoppingCart class="agent-icon" />
           <h3>Direito do Consumidor</h3>
-          <p>
-            Defenda os direitos do consumidor com análise de relações de
-            consumo, resoluções de conflitos e ações.
-          </p>
-          <a href="#" class="link-arrow">Meu Agente →</a>
         </article>
         <article class="card agent-card">
-          <span class="tag">Trabalhista</span>
+          <Users class="agent-icon" />
+          <h3>Direito de Família</h3>
+        </article>
+        <article class="card agent-card">
+          <Briefcase class="agent-icon" />
           <h3>Direito Trabalhista</h3>
-          <p>
-            Atuação em reclamações, acidentes de trabalho, contratos e
-            rescisões com base na CLT e jurisprudência.
-          </p>
-          <a href="#" class="link-arrow">Meu Agente →</a>
         </article>
         <article class="card agent-card wide">
           <div class="wide-content">
@@ -184,7 +187,7 @@ const mobileMenuOpen = ref(false)
             Privacidade e Segurança em Primeiro Lugar
           </h2>
           <p class="section-subtitle">
-            Seus dados, processos e informações de clientes estão protegidos.
+            Seus dados, processos e informações pessoais dos representados estão protegidos.
             Nosso sistema utiliza criptografia, controle de acesso e
             conformidade com a LGPD.
           </p>
@@ -248,33 +251,68 @@ const mobileMenuOpen = ref(false)
           Planos pensados para advogados autônomos e escritórios que querem
           ganhar escala sem perder qualidade.
         </p>
+
+        <div class="billing-switch" role="group" aria-label="Ciclo de pagamento">
+          <button
+            type="button"
+            class="switch-option"
+            :class="{ active: billing === 'monthly' }"
+            @click="billing = 'monthly'"
+          >
+            Mensal
+          </button>
+          <button
+            type="button"
+            class="switch-option"
+            :class="{ active: billing === 'annual' }"
+            @click="billing = 'annual'"
+          >
+            Anual
+          </button>
+        </div>
       </div>
       <div class="container pricing-grid">
         <article class="card pricing-card">
-          <h3 class="plan-name">Plano Individual</h3>
-          <p class="plan-desc">Ideal para advogados autônomos e pequenas demandas.</p>
-          <div class="price">R$ 197<span>/mês</span></div>
+          <span class="badge">10 dias grátis</span>
+          <h3 class="plan-name">Plano Básico</h3>
+          <p class="plan-desc">Para quem está começando com automação jurídica.</p>
+          <div class="price">
+            {{ formatPrice(billing === 'monthly' ? 69.9 : 69.9 * 12) }}<span>{{ billing === 'monthly' ? '/mês' : '/ano' }}</span>
+          </div>
           <ul class="plan-features">
-            <li>Acesso a todos os agentes</li>
-            <li>Consultas ilimitadas</li>
-            <li>Memória de documentos e clientes</li>
-            <li>Suporte por e-mail</li>
+            <li>Acesso a agentes básicos (Civil, Trabalhista e Tributário)</li>
+            <li>Criação de pastas</li>
+            <li>Até 5 templates</li>
+            <li>10 dias grátis para teste</li>
           </ul>
-          <a href="#" class="btn btn-secondary btn-block">Assinar Individual</a>
+          <a href="#" class="btn btn-secondary btn-block">Assinar Básico</a>
         </article>
         <article class="card pricing-card featured">
           <span class="badge">Mais popular</span>
-          <h3 class="plan-name">Plano Escritório</h3>
-          <p class="plan-desc">Para equipes que precisam colaborar e escalar.</p>
-          <div class="price">R$ 497<span>/mês</span></div>
+          <h3 class="plan-name">Plano Avançado</h3>
+          <p class="plan-desc">Para advogados que precisam de mais especificidade.</p>
+          <div class="price">
+            {{ formatPrice(billing === 'monthly' ? 159.9 : 159.9 * 12) }}<span>{{ billing === 'monthly' ? '/mês' : '/ano' }}</span>
+          </div>
           <ul class="plan-features">
-            <li>Tudo do Individual</li>
-            <li>Até 10 assentos (comprar mais)</li>
-            <li>Compartilhamento de templates e memória</li>
-            <li>Revisor de documentos avançado</li>
-            <li>Suporte prioritário</li>
+            <li>Agentes específicos por área (em breve)</li>
+            <li>Criação ilimitada de pastas</li>
+            <li>Análise de arquivos por mês</li>
+            <li>Templates ilimitados</li>
           </ul>
-          <a href="#" class="btn btn-primary btn-block">Assinar Escritório</a>
+          <a href="#" class="btn btn-primary btn-block">Assinar Avançado</a>
+        </article>
+        <article class="card pricing-card">
+          <h3 class="plan-name">Plano Empresarial</h3>
+          <p class="plan-desc">Para escritórios com múltiplos profissionais.</p>
+          <div class="price">Sob consulta</div>
+          <ul class="plan-features">
+            <li>Múltiplas contas sob demanda</li>
+            <li>Mesmos acessos do Plano Avançado</li>
+            <li>Valor diferenciado para equipes</li>
+            <li>Gestão de assentos e faturamento</li>
+          </ul>
+          <a href="#" class="btn btn-secondary btn-block">Falar com vendas</a>
         </article>
       </div>
     </section>
@@ -628,6 +666,13 @@ ul {
   font-weight: 600;
 }
 
+.agent-icon {
+  width: 3rem;
+  height: 3rem;
+  color: var(--primary);
+  flex-shrink: 0;
+}
+
 .agent-card p {
   color: var(--text-70);
   font-size: 0.9375rem;
@@ -721,9 +766,9 @@ ul {
 /* Pricing */
 .pricing-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
-  max-width: 800px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
@@ -776,6 +821,7 @@ ul {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
+  flex: 1;
   margin: 1rem 0 1.5rem;
 }
 
@@ -792,6 +838,37 @@ ul {
   left: 0;
   color: var(--primary);
   font-weight: 700;
+}
+
+.billing-switch {
+  display: inline-flex;
+  gap: 0.25rem;
+  margin-top: 1.5rem;
+  padding: 0.25rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+}
+
+.switch-option {
+  background: transparent;
+  border: none;
+  border-radius: 999px;
+  color: var(--text-70);
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  transition: background 0.15s, color 0.15s;
+}
+
+.switch-option:hover {
+  color: var(--text);
+}
+
+.switch-option.active {
+  background: var(--primary);
+  color: var(--primary-text);
+  font-weight: 600;
 }
 
 /* Footer */
