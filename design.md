@@ -335,3 +335,141 @@ Para aplicar no app, use as variáveis e combinações de classe abaixo.
 6. **Bordas**: usar `border`/`border-strong` para hierarquia.
 7. **Animações**: adicionar `reveal-in` e `reveal`.
 8. **Gradiente/glow**: usar `--gradient-ember` e `--glow-ember` em CTAs.
+
+
+---
+
+# Tokens do app Ementa (print da interface real)
+
+> Extraído de `ementa/packages/ui/src/styles/tokens.css` e dos componentes em `ementa/packages/ui/src/components/`. Essa paleta é a que aparece no print do app.
+
+## 1. Cores do app
+
+### 1.1 Fundos
+
+| Token | Valor | Uso no print |
+|-------|-------|--------------|
+| `--color-base-100` | `oklch(9% 0.005 260)` | Cor de fundo principal (mais escura) |
+| `--color-base-200` | `oklch(13% 0.006 260)` | Sidebar, cards secundários |
+| `--color-base-300` | `oklch(18% 0.008 260)` | Fundo de inputs/campos |
+| `--color-base-400` | `oklch(24% 0.01 260)` | Bordas, divisórias, hover |
+
+### 1.2 Texto
+
+| Token | Valor | Uso no print |
+|-------|-------|--------------|
+| `--color-content` | `oklch(96% 0.005 260)` | Texto principal (quase branco) |
+| `--color-content-muted` | `oklch(70% 0.012 260)` | Texto secundário, placeholders, ícones inativos |
+| `--color-content-subtle` | `oklch(50% 0.012 260)` | Placeholders e textos bem discretos |
+
+### 1.3 Cores de destaque e semânticas
+
+| Token | Valor | Uso no print |
+|-------|-------|--------------|
+| `--color-accent` | `oklch(74% 0.14 65)` | Botão de envio, destaques, foco |
+| `--color-accent-content` | `oklch(15% 0.02 65)` | Texto sobre o botão de destaque |
+| `--color-success` | `oklch(72% 0.17 155)` | Estados de sucesso |
+| `--color-success-content` | `oklch(15% 0.03 155)` | Texto sobre sucesso |
+| `--color-warning` | `oklch(80% 0.16 85)` | Alertas |
+| `--color-warning-content` | `oklch(18% 0.03 85)` | Texto sobre warning |
+| `--color-error` | `oklch(68% 0.21 25)` | Erros |
+| `--color-error-content` | `oklch(97% 0.01 25)` | Texto sobre erro |
+| `--color-info` | `oklch(72% 0.14 230)` | Informações |
+| `--color-info-content` | `oklch(15% 0.02 230)` | Texto sobre info |
+
+### 1.4 Bordas e raios
+
+| Token | Valor | Uso |
+|-------|-------|-----|
+| `--radius-sm` | `0.375rem` | 6px — botões pequenos, badges |
+| `--radius-md` | `0.625rem` | 10px — inputs, botões padrão, cards |
+| `--radius-lg` | `1rem` | 16px — modais, diálogos, cards grandes |
+| `--radius-xl` | `1.5rem` | 24px — raios grandes |
+| Borda padrão | `1px solid var(--color-base-400)` | Inputs, cards, divisórias |
+| Borda ativa | `1px solid var(--color-accent)` | Input com foco, botão selecionado |
+
+### 1.5 Movimento
+
+| Token | Valor | Uso |
+|-------|-------|-----|
+| `--ease-out` | `cubic-bezier(0.23, 1, 0.32, 1)` | Press, transições rápidas |
+| `--ease-in-out` | `cubic-bezier(0.77, 0, 0.175, 1)` | Movimentos modais |
+| `--ease-drawer` | `cubic-bezier(0.32, 0.72, 0, 1)` | Drawers |
+| `--duration-press` | `140ms` | Botões, toggles |
+| `--duration-tooltip` | `160ms` | Tooltips |
+| `--duration-dropdown` | `180ms` | Dropdowns |
+| `--duration-modal` | `260ms` | Modais |
+| `--duration-drawer` | `280ms` | Drawers |
+
+### 1.6 Fontes
+
+| Token | Valor |
+|-------|-------|
+| `--font-sans` | `ui-sans-serif, system-ui, sans-serif` |
+
+O app usa a fonte do sistema. Não há Google Fonts nem fonte display custom no app.
+
+## 2. Padrões de componentes do app
+
+### 2.1 Botão primário
+
+```tsx
+<button className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-[var(--radius-md)] text-sm font-medium transition-[transform,background-color,border-color,opacity] duration-[var(--duration-press)] ease-[var(--ease-out)] active:scale-[0.97] disabled:pointer-events-none disabled:opacity-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-accent)] bg-[var(--color-accent)] text-[var(--color-accent-content)] hover:brightness-110">
+  Ação
+</button>
+```
+
+### 2.2 Botão secundário
+
+```tsx
+<button className="... bg-[var(--color-base-300)] text-[var(--color-content)] hover:bg-[var(--color-base-400)]">
+  Ação
+</button>
+```
+
+### 2.3 Input
+
+```tsx
+<input className="w-full rounded-[var(--radius-md)] border border-[var(--color-base-400)] bg-[var(--color-base-300)] px-3 py-2 text-sm text-[var(--color-content)] outline-none placeholder:text-[var(--color-content-subtle)] transition-colors duration-[var(--duration-press)] ease-[var(--ease-out)] focus:border-[var(--color-accent)]" />
+```
+
+### 2.4 Card / popover
+
+```tsx
+<div className="rounded-[var(--radius-lg)] border border-[var(--color-base-400)] bg-[var(--color-base-200)] p-5 shadow-2xl">
+  Conteúdo
+</div>
+```
+
+### 2.5 Item de lista selecionável
+
+```tsx
+<div className="flex cursor-default items-center gap-2 rounded-[var(--radius-sm)] px-2.5 py-2 text-sm text-[var(--color-content)] data-[selected=true]:bg-[var(--color-base-300)]">
+  Item
+</div>
+```
+
+## 3. Mapeamento para o clone da landing page
+
+Para alinhar o visual do clone da landing page com o app real, substituir as variáveis da landing por esses valores:
+
+| Variável do clone | Substituir por | Valor OKLCH |
+|-------------------|----------------|-------------|
+| `--background` | `color-base-100` | `oklch(9% 0.005 260)` |
+| `--foreground` | `color-content` | `oklch(96% 0.005 260)` |
+| `--surface-1` | `color-base-200` | `oklch(13% 0.006 260)` |
+| `--surface-2` | `color-base-300` | `oklch(18% 0.008 260)` |
+| `--surface-3` | `color-base-400` | `oklch(24% 0.01 260)` |
+| `--primary` / `--ember` | `color-accent` | `oklch(74% 0.14 65)` |
+| `--primary-foreground` | `color-accent-content` | `oklch(15% 0.02 65)` |
+| `--muted-foreground` | `color-content-muted` | `oklch(70% 0.012 260)` |
+| `--border` | `color-base-400` | `oklch(24% 0.01 260)` |
+| `--border-strong` | `color-base-400` | `oklch(24% 0.01 260)` |
+| `--input` | `color-base-400` | `oklch(24% 0.01 260)` |
+| `--ring` | `color-accent` | `oklch(74% 0.14 65)` |
+| `--radius` | `radius-md` | `0.625rem` |
+| `--font-sans` | `ui-sans-serif` | sem fonte externa |
+
+### Arquivo de override sugerido
+
+`public/app-override.css` redefinindo `:root` com os valores acima e carregado **depois** de `clone-styles.css` em `index.html`. Ver `public/app-override.css` do `ementa-landing-page`.
