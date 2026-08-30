@@ -70,7 +70,7 @@ const faqs = ref<FaqItem[]>([
           :aria-expanded="item.open"
           @click="item.open = !item.open"
         >
-          <h3 class="pr-4">{ item.q }</h3>
+          <h3 class="pr-4">{{ item.q }}</h3>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -95,7 +95,7 @@ const faqs = ref<FaqItem[]>([
           <p
             class="text-muted-foreground leading-relaxed min-h-0 overflow-hidden"
           >
-            { item.a }
+            {{ item.a }}
           </p>
         </div>
       </div>
