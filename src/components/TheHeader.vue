@@ -1,5 +1,81 @@
 <script setup lang="ts"></script>
 
 <template>
-<header class="sticky top-0 z-50 border-b transition-colors border-transparent bg-background/40 backdrop-blur-sm"><nav aria-label="Navegação principal" class="mx-auto grid max-w-[1200px] grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-4 py-3 sm:px-8"><a href="#topo" class="flex min-w-0 items-center gap-2"><img src="/logo.png" alt="Ementa" class="h-8 w-8 shrink-0 rounded-sm object-cover" /><span class="truncate font-display text-lg font-extrabold tracking-tight">Ementa</span></a><div class="hidden items-center gap-1 lg:flex"><a href="#produto" class="rounded-sm px-3 py-2 text-sm text-muted-foreground transition-colors hover:text-foreground">Produto</a><a href="#como-funciona" class="rounded-sm px-3 py-2 text-sm text-muted-foreground transition-colors hover:text-foreground">Como funciona</a><a href="#recursos" class="rounded-sm px-3 py-2 text-sm text-muted-foreground transition-colors hover:text-foreground">Recursos</a><a href="#para-quem" class="rounded-sm px-3 py-2 text-sm text-muted-foreground transition-colors hover:text-foreground">Para quem</a><a href="#faq" class="rounded-sm px-3 py-2 text-sm text-muted-foreground transition-colors hover:text-foreground">FAQ</a><a href="#testar" class="inline-flex items-center justify-center gap-2 whitespace-nowrap cursor-pointer transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 disabled:cursor-not-allowed [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-primary text-primary-foreground shadow hover:bg-primary/90 h-8 rounded-md px-3 text-xs ml-3 font-semibold">Quero testar o Ementa</a></div><div class="flex items-center gap-2 lg:hidden"><a href="#testar" class="inline-flex items-center justify-center gap-2 whitespace-nowrap cursor-pointer transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 disabled:cursor-not-allowed [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-primary text-primary-foreground shadow hover:bg-primary/90 h-8 rounded-md px-3 text-xs font-semibold">Testar</a><button type="button" aria-expanded="false" aria-controls="menu-mobile" aria-label="Abrir menu" class="grid h-10 w-10 place-items-center rounded-sm border border-border text-foreground"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu h-5 w-5" aria-hidden="true"><path d="M4 5h16"></path><path d="M4 12h16"></path><path d="M4 19h16"></path></svg></button></div></nav></header>
+  <header
+    class="sticky top-0 z-50 border-b transition-colors border-transparent bg-background/40 backdrop-blur-sm"
+  >
+    <nav
+      aria-label="Navegação principal"
+      class="mx-auto grid max-w-[1200px] grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-4 py-3 sm:px-8"
+    >
+      <a href="#topo" class="flex min-w-0 items-center gap-2"
+        ><img
+          src="/logo.png"
+          alt="Novatio"
+          class="h-8 w-8 shrink-0 rounded-sm object-cover"
+        /><span
+          class="truncate font-display text-lg font-extrabold tracking-tight"
+          >Novatio</span
+        ></a
+      >
+      <div class="hidden items-center gap-1 lg:flex">
+        <a
+          href="#produto"
+          class="rounded-sm px-3 py-2 text-sm text-muted-foreground transition-colors hover:text-foreground"
+          >Produto</a
+        ><a
+          href="#como-funciona"
+          class="rounded-sm px-3 py-2 text-sm text-muted-foreground transition-colors hover:text-foreground"
+          >Como funciona</a
+        ><a
+          href="#recursos"
+          class="rounded-sm px-3 py-2 text-sm text-muted-foreground transition-colors hover:text-foreground"
+          >Recursos</a
+        ><a
+          href="#para-quem"
+          class="rounded-sm px-3 py-2 text-sm text-muted-foreground transition-colors hover:text-foreground"
+          >Para quem</a
+        ><a
+          href="#faq"
+          class="rounded-sm px-3 py-2 text-sm text-muted-foreground transition-colors hover:text-foreground"
+          >FAQ</a
+        ><a
+          href="#testar"
+          class="inline-flex items-center justify-center gap-2 whitespace-nowrap cursor-pointer transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 disabled:cursor-not-allowed [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-primary text-primary-foreground shadow hover:bg-primary/90 h-8 rounded-md px-3 text-xs ml-3 font-semibold"
+          >Quero testar o Novatio</a
+        >
+      </div>
+      <div class="flex items-center gap-2 lg:hidden">
+        <a
+          href="#testar"
+          class="inline-flex items-center justify-center gap-2 whitespace-nowrap cursor-pointer transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 disabled:cursor-not-allowed [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-primary text-primary-foreground shadow hover:bg-primary/90 h-8 rounded-md px-3 text-xs font-semibold"
+          >Testar</a
+        ><button
+          type="button"
+          aria-expanded="false"
+          aria-controls="menu-mobile"
+          aria-label="Abrir menu"
+          class="grid h-10 w-10 place-items-center rounded-sm border border-border text-foreground"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-menu h-5 w-5"
+            aria-hidden="true"
+          >
+            <path d="M4 5h16"></path>
+            <path d="M4 12h16"></path>
+            <path d="M4 19h16"></path>
+          </svg>
+        </button>
+      </div>
+    </nav>
+  </header>
 </template>

@@ -1,5 +1,48 @@
 <script setup lang="ts"></script>
 
 <template>
-<section id="testar" class="mx-auto max-w-[1200px] scroll-mt-20 px-4 py-16 sm:px-8 sm:py-24 border-t border-border"><div class="relative overflow-hidden rounded-lg border border-border bg-surface-1 px-6 py-14 text-center sm:px-12"><div class="pointer-events-none absolute inset-0 grid-backdrop opacity-60" aria-hidden="true"></div><div class="relative mx-auto max-w-2xl"><h2 class="font-display text-3xl font-extrabold sm:text-4xl">Sua próxima pesquisa jurídica pode começar aqui.</h2><p class="mt-4 text-muted-foreground">Conheça o Ementa e descubra uma nova forma de pesquisar, analisar e estudar o Direito.</p><a href="mailto:contato@ementa.app?subject=Lista%20de%20acesso%20Ementa" class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm cursor-pointer transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 disabled:cursor-not-allowed [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-primary text-primary-foreground shadow hover:bg-primary/90 h-10 rounded-md px-8 mt-8 w-full font-semibold sm:w-auto">Quero testar o Ementa<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right h-4 w-4" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a><p class="mt-3 text-xs text-muted-foreground">Produto em pré-lançamento — entre na lista de acesso.</p></div></div></section>
+  <section
+    id="testar"
+    class="mx-auto max-w-[1200px] scroll-mt-20 px-4 py-16 sm:px-8 sm:py-24 border-t border-border"
+  >
+    <div
+      class="relative overflow-hidden rounded-lg border border-border bg-surface-1 px-6 py-14 text-center sm:px-12"
+    >
+      <div
+        class="pointer-events-none absolute inset-0 grid-backdrop opacity-60"
+        aria-hidden="true"
+      ></div>
+      <div class="relative mx-auto max-w-2xl">
+        <h2 class="font-display text-3xl font-extrabold sm:text-4xl">
+          Sua próxima pesquisa jurídica pode começar aqui.
+        </h2>
+        <p class="mt-4 text-muted-foreground">
+          Conheça o Novatio e descubra uma nova forma de pesquisar, analisar e
+          estudar o Direito.
+        </p>
+        <a
+          href="mailto:contato@novatio.app?subject=Lista%20de%20acesso%20Novatio"
+          class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm cursor-pointer transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 disabled:cursor-not-allowed [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-primary text-primary-foreground shadow hover:bg-primary/90 h-10 rounded-md px-8 mt-8 w-full font-semibold sm:w-auto"
+          >Quero testar o Novatio<svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-arrow-right h-4 w-4"
+            aria-hidden="true"
+          >
+            <path d="M5 12h14"></path>
+            <path d="m12 5 7 7-7 7"></path></svg
+        ></a>
+        <p class="mt-3 text-xs text-muted-foreground">
+          Produto em pré-lançamento — entre na lista de acesso.
+        </p>
+      </div>
+    </div>
+  </section>
 </template>

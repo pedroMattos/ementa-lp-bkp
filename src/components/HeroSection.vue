@@ -1,5 +1,110 @@
 <script setup lang="ts"></script>
 
 <template>
-<div class="relative overflow-hidden border-b border-border"><div class="pointer-events-none absolute inset-0 grid-backdrop" aria-hidden="true"></div><section class="mx-auto max-w-[1200px] scroll-mt-20 px-4 py-16 sm:px-8 sm:py-24 relative"><div class="mx-auto max-w-3xl text-center"><span class="inline-flex items-center gap-2 rounded-full border border-border bg-surface-1 px-3 py-1 font-mono text-[11px] tracking-widest text-muted-foreground"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sparkles h-3.5 w-3.5 text-primary" aria-hidden="true"><path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"></path><path d="M20 2v4"></path><path d="M22 4h-4"></path><circle cx="4" cy="20" r="2"></circle></svg>IA JURÍDICA — DIREITO BRASILEIRO</span><h1 class="mt-6 font-display text-4xl leading-[1.08] font-extrabold sm:text-5xl lg:text-6xl">Pesquisa jurídica mais rápida, inteligente e fundamentada.</h1><p class="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">Pesquise legislação, jurisprudência e decisões judiciais com inteligência artificial e transforme horas de pesquisa em respostas mais rápidas e organizadas.</p><div class="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row"><a href="#testar" class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm cursor-pointer transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 disabled:cursor-not-allowed [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-primary text-primary-foreground shadow hover:bg-primary/90 h-10 rounded-md px-8 w-full font-semibold sm:w-auto">Quero testar o Ementa<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right h-4 w-4" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a><a href="#como-funciona" class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium cursor-pointer transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 disabled:cursor-not-allowed [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 border shadow-sm hover:bg-accent hover:text-accent-foreground h-10 rounded-md px-8 w-full border-border bg-transparent sm:w-auto">Ver como funciona</a></div><p class="mt-4 text-sm text-muted-foreground">Não é apenas conversar com uma IA. É pesquisar o Direito com IA.</p></div><div class="reveal mx-auto mt-12 max-w-5xl"><img src="/app-real.png" alt="Interface do Ementa" class="w-full rounded-lg border border-border bg-surface-1" /><p class="mt-4 flex items-center justify-center gap-2 text-sm text-muted-foreground"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield-check h-4 w-4 shrink-0 text-primary" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="m9 12 2 2 4-4"></path></svg>IA como copiloto. Você continua no controle.</p></div></section></div>
+  <div class="relative overflow-hidden border-b border-border">
+    <div
+      class="pointer-events-none absolute inset-0 grid-backdrop"
+      aria-hidden="true"
+    ></div>
+    <section
+      class="mx-auto max-w-[1200px] scroll-mt-20 px-4 py-16 sm:px-8 sm:py-24 relative"
+    >
+      <div class="mx-auto max-w-3xl text-center">
+        <span
+          class="inline-flex items-center gap-2 rounded-full border border-border bg-surface-1 px-3 py-1 font-mono text-[11px] tracking-widest text-muted-foreground"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-sparkles h-3.5 w-3.5 text-primary"
+            aria-hidden="true"
+          >
+            <path
+              d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"
+            ></path>
+            <path d="M20 2v4"></path>
+            <path d="M22 4h-4"></path>
+            <circle cx="4" cy="20" r="2"></circle></svg
+          >IA JURÍDICA — DIREITO BRASILEIRO</span
+        >
+        <h1
+          class="mt-6 font-display text-4xl leading-[1.08] font-extrabold sm:text-5xl lg:text-6xl"
+        >
+          Pesquisa jurídica mais rápida, inteligente e fundamentada.
+        </h1>
+        <p
+          class="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg"
+        >
+          Pesquise legislação, jurisprudência e decisões judiciais com
+          inteligência artificial e transforme horas de pesquisa em respostas
+          mais rápidas e organizadas.
+        </p>
+        <div
+          class="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row"
+        >
+          <a
+            href="#testar"
+            class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm cursor-pointer transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 disabled:cursor-not-allowed [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-primary text-primary-foreground shadow hover:bg-primary/90 h-10 rounded-md px-8 w-full font-semibold sm:w-auto"
+            >Quero testar o Novatio<svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-arrow-right h-4 w-4"
+              aria-hidden="true"
+            >
+              <path d="M5 12h14"></path>
+              <path d="m12 5 7 7-7 7"></path></svg></a
+          ><a
+            href="#como-funciona"
+            class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium cursor-pointer transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 disabled:cursor-not-allowed [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 border shadow-sm hover:bg-accent hover:text-accent-foreground h-10 rounded-md px-8 w-full border-border bg-transparent sm:w-auto"
+            >Ver como funciona</a
+          >
+        </div>
+        <p class="mt-4 text-sm text-muted-foreground">
+          Não é apenas conversar com uma IA. É pesquisar o Direito com IA.
+        </p>
+      </div>
+      <div class="reveal mx-auto mt-12 max-w-5xl">
+        <img
+          src="/app-real.png"
+          alt="Interface do Novatio"
+          class="w-full rounded-lg border border-border bg-surface-1"
+        />
+        <p
+          class="mt-4 flex items-center justify-center gap-2 text-sm text-muted-foreground"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-shield-check h-4 w-4 shrink-0 text-primary"
+            aria-hidden="true"
+          >
+            <path
+              d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"
+            ></path>
+            <path d="m9 12 2 2 4-4"></path></svg
+          >IA como copiloto. Você continua no controle.
+        </p>
+      </div>
+    </section>
+  </div>
 </template>

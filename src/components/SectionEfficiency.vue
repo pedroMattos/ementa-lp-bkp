@@ -1,5 +1,121 @@
 <script setup lang="ts"></script>
 
 <template>
-<section class="mx-auto max-w-[1200px] scroll-mt-20 px-4 py-16 sm:px-8 sm:py-24 border-t border-border"><div class="max-w-2xl"><p class="label-mono mb-4">Benefícios</p><h2 class="font-display text-3xl font-bold sm:text-4xl">Menos tempo procurando. Mais tempo trabalhando.</h2></div><div class="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4"><article class="surface-card p-6"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-timer h-5 w-5 text-primary" aria-hidden="true"><line x1="10" x2="14" y1="2" y2="2"></line><line x1="12" x2="15" y1="14" y2="11"></line><circle cx="12" cy="14" r="8"></circle></svg><h3 class="mt-4 font-display text-lg font-semibold">Pesquisa mais rápida</h3><p class="mt-2 text-sm leading-relaxed text-muted-foreground">Encontre informações relevantes sem alternar constantemente entre diferentes fontes.</p></article><article class="surface-card p-6"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-square h-5 w-5 text-primary" aria-hidden="true"><path d="M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z"></path></svg><h3 class="mt-4 font-display text-lg font-semibold">Linguagem natural</h3><p class="mt-2 text-sm leading-relaxed text-muted-foreground">Faça perguntas da forma como você pensaria sobre o problema.</p></article><article class="surface-card p-6"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-layers h-5 w-5 text-primary" aria-hidden="true"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"></path><path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12"></path><path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17"></path></svg><h3 class="mt-4 font-display text-lg font-semibold">Mais contexto</h3><p class="mt-2 text-sm leading-relaxed text-muted-foreground">Conecte pesquisa, legislação, decisões e análise em uma única experiência.</p></article><article class="surface-card p-6"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check h-5 w-5 text-primary" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg><h3 class="mt-4 font-display text-lg font-semibold">Mais produtividade</h3><p class="mt-2 text-sm leading-relaxed text-muted-foreground">Use o tempo economizado para se concentrar no trabalho que realmente importa.</p></article></div></section>
+  <section
+    class="mx-auto max-w-[1200px] scroll-mt-20 px-4 py-16 sm:px-8 sm:py-24 border-t border-border"
+  >
+    <div class="max-w-2xl">
+      <p class="label-mono mb-4">Benefícios</p>
+      <h2 class="font-display text-3xl font-bold sm:text-4xl">
+        Menos tempo procurando. Mais tempo trabalhando.
+      </h2>
+    </div>
+    <div class="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      <article class="surface-card p-6">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="lucide lucide-timer h-5 w-5 text-primary"
+          aria-hidden="true"
+        >
+          <line x1="10" x2="14" y1="2" y2="2"></line>
+          <line x1="12" x2="15" y1="14" y2="11"></line>
+          <circle cx="12" cy="14" r="8"></circle>
+        </svg>
+        <h3 class="mt-4 font-display text-lg font-semibold">
+          Pesquisa mais rápida
+        </h3>
+        <p class="mt-2 text-sm leading-relaxed text-muted-foreground">
+          Encontre informações relevantes sem alternar constantemente entre
+          diferentes fontes.
+        </p>
+      </article>
+      <article class="surface-card p-6">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="lucide lucide-message-square h-5 w-5 text-primary"
+          aria-hidden="true"
+        >
+          <path
+            d="M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z"
+          ></path>
+        </svg>
+        <h3 class="mt-4 font-display text-lg font-semibold">
+          Linguagem natural
+        </h3>
+        <p class="mt-2 text-sm leading-relaxed text-muted-foreground">
+          Faça perguntas da forma como você pensaria sobre o problema.
+        </p>
+      </article>
+      <article class="surface-card p-6">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="lucide lucide-layers h-5 w-5 text-primary"
+          aria-hidden="true"
+        >
+          <path
+            d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"
+          ></path>
+          <path
+            d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12"
+          ></path>
+          <path
+            d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17"
+          ></path>
+        </svg>
+        <h3 class="mt-4 font-display text-lg font-semibold">Mais contexto</h3>
+        <p class="mt-2 text-sm leading-relaxed text-muted-foreground">
+          Conecte pesquisa, legislação, decisões e análise em uma única
+          experiência.
+        </p>
+      </article>
+      <article class="surface-card p-6">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="lucide lucide-check h-5 w-5 text-primary"
+          aria-hidden="true"
+        >
+          <path d="M20 6 9 17l-5-5"></path>
+        </svg>
+        <h3 class="mt-4 font-display text-lg font-semibold">
+          Mais produtividade
+        </h3>
+        <p class="mt-2 text-sm leading-relaxed text-muted-foreground">
+          Use o tempo economizado para se concentrar no trabalho que realmente
+          importa.
+        </p>
+      </article>
+    </div>
+  </section>
 </template>
