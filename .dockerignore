@@ -1,0 +1,15 @@
+node_modules
+dist
+dist-ssr
+coverage
+.git
+.gitignore
+.vscode
+*.log
+npm-debug.log*
+.eslintcache
+*.tsbuildinfo
+README.md
+design.md
+Dockerfile
+.dockerignore
